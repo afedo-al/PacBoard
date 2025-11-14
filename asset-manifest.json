@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PacBoard/static/css/main.67220f69.css",
-    "main.js": "/PacBoard/static/js/main.6a69340b.js",
+    "main.css": "/PacBoard/static/css/main.e0c54ea1.css",
+    "main.js": "/PacBoard/static/js/main.a09dcdef.js",
     "static/js/453.882586d9.chunk.js": "/PacBoard/static/js/453.882586d9.chunk.js",
     "index.html": "/PacBoard/index.html",
-    "main.67220f69.css.map": "/PacBoard/static/css/main.67220f69.css.map",
-    "main.6a69340b.js.map": "/PacBoard/static/js/main.6a69340b.js.map",
+    "main.e0c54ea1.css.map": "/PacBoard/static/css/main.e0c54ea1.css.map",
+    "main.a09dcdef.js.map": "/PacBoard/static/js/main.a09dcdef.js.map",
     "453.882586d9.chunk.js.map": "/PacBoard/static/js/453.882586d9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.67220f69.css",
-    "static/js/main.6a69340b.js"
+    "static/css/main.e0c54ea1.css",
+    "static/js/main.a09dcdef.js"
   ]
 }
