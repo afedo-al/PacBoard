@@ -20,10 +20,11 @@ function Square({ value, onSquareClick, highlight }) {
     >
       {value && (
         <img
-          src={`/img/${value}.png`}
+          src={`${import.meta.env.BASE_URL}img/${value}.png`}
           alt={value}
           className="piece"
         />
+
       )}
     </button>
   );
