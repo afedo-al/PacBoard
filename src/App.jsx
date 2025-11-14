@@ -132,10 +132,9 @@ export default function Game() {
   /* ------- EASTER EGG BOTÓN ------- */
   function showEasterEgg() {
     alert(`
-      PAC-BOARD ARCADE  
+      PAC-BOARD  
       Alumno: Alfredo J Cruz Miss  
       Matrícula: al066340  
-      ¡Gracias por jugar! 👾
     `);
   }
 
