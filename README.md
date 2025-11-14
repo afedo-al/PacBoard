@@ -1,16 +1,54 @@
-# React + Vite
+# 🎮 PAC-BOARD – Tic-Tac-Toe Arcade (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Mejoras implementadas 
+### ✔ 1. Tema Arcade (Pac-Man)
+- Reemplazo de X y O por imágenes:
+  - x → **FANTASMITA**
+  - o → **PACMAN :V**
+- Estética retro arcade con fuente pixelada y luces tipo neón.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 2. Tablero dinámico
+El usuario puede elegir entre:
+- 3×3  
+- 4×4  
+- 5×5  
+- 6×6  
 
-## React Compiler
+### 3. Mensajes personalizados
+El juego muestra:
+- **¡FELICIDADES!: FANTASMITA**
+- **¡FELICIDADES!: PACMAN :V**
+- Detección automática de empate.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 4. Guardado automático
+Se almacena en `localStorage`:
+- historial del juego  
+- movimiento actual  
+- tamaño del tablero  
+Así, el juego continúa después de recargar la página.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✔ 5. Easter Egg (botón Info)
+Botón que muestra:
+
+```
+PAC-BOARD  
+Alumno: Alfredo J Cruz Miss  
+Matrícula: 66340  
+```
+---
+
+## 🕹 Cómo jugar
+1. Selecciona el tamaño del tablero.  
+2. Juega turnos entre **FANTASMITA** y **PACMAN :V**.  
+3. El sistema detecta:
+   - ganador  
+   - empate  
+4. Presiona **Reset Game** para reiniciar.  
+5. Presiona **Info.** para ver el Easter Egg del alumno.
+
+---
+
+## 🌐 Repositorio
+https://github.com/afedo-al/PacBoard
