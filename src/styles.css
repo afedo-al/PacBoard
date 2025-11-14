@@ -176,7 +176,6 @@ select {
     0 0 40px #008cff;
 }
 
-/* POPUP */
 @keyframes popup {
   0% { transform: scale(0.4); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
@@ -190,6 +189,14 @@ select {
 .game-info button:hover {
   background: #4d79ff;
 }
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 
 
 @media (max-width: 600px) {

@@ -24,7 +24,6 @@ function Square({ value, onSquareClick, highlight }) {
           alt={value}
           className="piece"
         />
-
       )}
     </button>
   );
@@ -58,7 +57,6 @@ function Board({ xIsNext, squares, onPlay, boardSize }) {
               .fill(null)
               .map((_, col) => {
                 const index = row * boardSize + col;
-
                 const highlight =
                   winnerInfo && winnerInfo.line.includes(index);
 
@@ -134,7 +132,7 @@ export default function Game() {
     alert(`
       PAC-BOARD  
       Alumno: Alfredo J Cruz Miss  
-      Matrícula: al066340  
+      Matrícula: 66340  
     `);
   }
 
@@ -147,46 +145,48 @@ export default function Game() {
   ));
 
   return (
-    <div className="game">
-      <h1>PAC-BOARD</h1>
+    <div className="game-container">
+      <div className="game">
+        <h1>PAC-BOARD</h1>
 
-      <button onClick={resetGame} className="reset-btn">Reset Game</button>
-      <button onClick={showEasterEgg} className="info-btn">Info.</button>
+        <button onClick={resetGame} className="reset-btn">Reset Game</button>
+        <button onClick={showEasterEgg} className="info-btn">Info.</button>
 
-      <br />
+        <br />
 
-      <label>Board size:</label>
-      <select
-        value={boardSize}
-        onChange={(e) => setBoardSize(parseInt(e.target.value))}
-      >
-        <option value={3}>3 × 3</option>
-        <option value={4}>4 × 4</option>
-        <option value={5}>5 × 5</option>
-        <option value={6}>6 × 6</option>
-      </select>
+        <label>Board size:</label>
+        <select
+          value={boardSize}
+          onChange={(e) => setBoardSize(parseInt(e.target.value))}
+        >
+          <option value={3}>3 × 3</option>
+          <option value={4}>4 × 4</option>
+          <option value={5}>5 × 5</option>
+          <option value={6}>6 × 6</option>
+        </select>
 
-      <div className="game-board">
-        <Board
-          xIsNext={xIsNext}
-          squares={currentSquares}
-          onPlay={handlePlay}
-          boardSize={boardSize}
-        />
-      </div>
-
-      {winnerInfo && (
-        <div className="winner-message">
-          ¡FELICIDADES!: <strong>{playerName(winnerInfo.player)}</strong>
+        <div className="game-board">
+          <Board
+            xIsNext={xIsNext}
+            squares={currentSquares}
+            onPlay={handlePlay}
+            boardSize={boardSize}
+          />
         </div>
-      )}
 
-      {!winnerInfo && isDraw(currentSquares) && (
-        <div className="draw-message">¡EMPATE!</div>
-      )}
+        {winnerInfo && (
+          <div className="winner-message">
+            ¡FELICIDADES!: <strong>{playerName(winnerInfo.player)}</strong>
+          </div>
+        )}
 
-      <div className="game-info">
-        <ol>{moves}</ol>
+        {!winnerInfo && isDraw(currentSquares) && (
+          <div className="draw-message">¡EMPATE!</div>
+        )}
+
+        <div className="game-info">
+          <ol>{moves}</ol>
+        </div>
       </div>
     </div>
   );
