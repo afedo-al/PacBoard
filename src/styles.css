@@ -1,13 +1,29 @@
-body {
+/* CENTRADO */ 
+html, body {
   margin: 0;
-  padding: 25px;
-  text-align: center;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background: radial-gradient(circle at center, #000022, #000010, #000000);
   font-family: "Press Start 2P", monospace;
   color: #ffe600;
 }
 
+/* VITE ROOT FIX */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
+/* === TÍTULO === */
 h1 {
   font-size: 32px;
   margin-bottom: 20px;
@@ -18,6 +34,7 @@ h1 {
     0 0 35px #ffaa00;
 }
 
+/* === CONTENEDOR DEL JUEGO === */
 .game {
   display: inline-block;
   padding: 20px;
@@ -27,9 +44,10 @@ h1 {
   box-shadow:
     0 0 20px #0033aa,
     0 0 40px #000a33 inset;
+  text-align: center;
 }
 
-
+/* === BOTONES === */
 button {
   font-family: "Press Start 2P", monospace;
   font-size: 12px;
@@ -64,7 +82,7 @@ button:hover {
   background: #ffe066;
 }
 
-/* BOTÓN EASTER EGG */
+/* INFO BUTTON (EASTER EGG) */
 .info-btn {
   background: #0044ff;
   color: #fff;
@@ -76,7 +94,7 @@ button:hover {
   background: #779aff;
 }
 
-
+/* SELECT */
 select {
   font-family: "Press Start 2P";
   padding: 8px;
@@ -87,16 +105,14 @@ select {
   box-shadow: 0 0 10px #ffeb3b;
 }
 
-
+/* TABLERO */
 .game-board {
   margin: 20px auto;
   padding: 15px;
   background: #000018;
   border-radius: 8px;
   border: 4px solid #0044cc;
-
   display: inline-block;
-
   box-shadow:
     0 0 12px #0044ff inset,
     0 0 25px #001155;
@@ -107,7 +123,7 @@ select {
   display: flex;
 }
 
-
+/* CASILLAS */
 .square {
   width: 75px;
   height: 75px;
@@ -139,7 +155,7 @@ select {
   object-fit: contain;
 }
 
-
+/* ESTADO */
 .status {
   margin-bottom: 10px;
   font-size: 14px;
@@ -149,6 +165,7 @@ select {
     0 0 18px #009dcc;
 }
 
+/* GANADOR Y EMPATE */
 .winner-message,
 .draw-message {
   margin-top: 20px;
@@ -158,7 +175,6 @@ select {
   font-family: "Press Start 2P", monospace;
 }
 
-/* GANADOR */
 .winner-message {
   color: #00ff88;
   text-shadow:
@@ -167,7 +183,6 @@ select {
     0 0 40px #009944;
 }
 
-/* EMPATE */
 .draw-message {
   color: #4ddbff;
   text-shadow:
@@ -176,12 +191,13 @@ select {
     0 0 40px #008cff;
 }
 
+/* ANIMACIÓN */
 @keyframes popup {
   0% { transform: scale(0.4); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
-
+/* HISTORIAL */
 .game-info button {
   background: #003cff;
   box-shadow: 0 0 10px #0066ff;
@@ -190,15 +206,7 @@ select {
   background: #4d79ff;
 }
 
-.game-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-
-
+/* RESPONSIVE */
 @media (max-width: 600px) {
   .square {
     width: 55px;
