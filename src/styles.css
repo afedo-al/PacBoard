@@ -8,24 +8,24 @@
 /* ==== CENTRADO Y FONDO ==== */
 html, body {
   width: 100%;
-  min-height: 100vh; /* ← funciona mejor que height:100% */
+  min-height: 100vh; /* evita cortes en GitHub Pages */
 }
 
 body {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* ← evita que se corte en pantallas chicas */
-  padding: 30px 0;
+  align-items: center;     /* ← Centrado REAL */
+  padding: 40px 0;         /* evita que se pegue arriba */
 
   background: radial-gradient(circle at center, #000022, #000010, #000000);
   font-family: "Press Start 2P", monospace;
   color: #ffe600;
 
-  /* ← NO bloquear scroll */
-  overflow-x: hidden;  /* solo evitar scroll horizontal */
+  overflow-x: hidden;   /* ← Evita scroll horizontal */
+  overflow-y: auto;     /* ← MANTÉN scroll vertical */
 }
 
-/* ==== FIX PARA VITE / GITHUB PAGES ==== */
+/* ---- FIX PARA VITE/GITHUB PAGES ---- */
 #root {
   width: 100%;
   display: flex;
@@ -38,6 +38,13 @@ h1 {
   margin-bottom: 20px;
   color: #ffeb3b;
   text-shadow: 0 0 10px #ffe600, 0 0 20px #ffcc00, 0 0 35px #ffaa00;
+}
+
+/* ==== CONTENEDOR GENERAL DEL JUEGO ==== */
+.game-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* ==== CONTENEDOR DEL JUEGO ==== */
@@ -151,7 +158,7 @@ select {
   text-shadow: 0 0 8px #00eaff, 0 0 18px #009dcc;
 }
 
-/* GANADOR Y EMPATE */
+/* MENSAJES */
 .winner-message,
 .draw-message {
   margin-top: 20px;
