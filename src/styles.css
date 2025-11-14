@@ -1,7 +1,12 @@
-/* CENTRADO */ 
-html, body {
+/* ==== RESET GLOBAL ==== */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==== CENTRADO GLOBAL ==== */
+html, body {
   width: 100%;
   height: 100%;
 }
@@ -14,16 +19,22 @@ body {
   background: radial-gradient(circle at center, #000022, #000010, #000000);
   font-family: "Press Start 2P", monospace;
   color: #ffe600;
+
+  /* 🚫 EVITA SCROLL */
+  overflow: hidden;
 }
 
-/* VITE ROOT FIX */
+/* ==== FIX PARA VITE / GITHUB PAGES ==== */
 #root {
   width: 100%;
+  height: 100%;
+
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-/* === TÍTULO === */
+/* ==== TÍTULO ==== */
 h1 {
   font-size: 32px;
   margin-bottom: 20px;
@@ -34,9 +45,8 @@ h1 {
     0 0 35px #ffaa00;
 }
 
-/* === CONTENEDOR DEL JUEGO === */
+/* ==== CONTENEDOR DEL JUEGO ==== */
 .game {
-  display: inline-block;
   padding: 20px;
   border-radius: 12px;
   background: #001244;
@@ -47,7 +57,7 @@ h1 {
   text-align: center;
 }
 
-/* === BOTONES === */
+/* ==== BOTONES ==== */
 button {
   font-family: "Press Start 2P", monospace;
   font-size: 12px;
@@ -72,7 +82,7 @@ button:hover {
   background: #ff5599;
 }
 
-/* RESET */
+/* RESET BUTTON */
 .reset-btn {
   background: #ffcc00;
   color: #000;
@@ -82,7 +92,7 @@ button:hover {
   background: #ffe066;
 }
 
-/* INFO BUTTON (EASTER EGG) */
+/* INFO BUTTON */
 .info-btn {
   background: #0044ff;
   color: #fff;
@@ -107,7 +117,7 @@ select {
 
 /* TABLERO */
 .game-board {
-  margin: 20px auto;
+  margin: 20px auto 0 auto;
   padding: 15px;
   background: #000018;
   border-radius: 8px;
@@ -128,10 +138,8 @@ select {
   width: 75px;
   height: 75px;
   margin: 4px;
-
   border: 3px solid #0066ff;
   background: #000;
-
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -171,7 +179,6 @@ select {
   margin-top: 20px;
   font-size: 20px;
   animation: popup 0.6s ease-out;
-
   font-family: "Press Start 2P", monospace;
 }
 
@@ -191,19 +198,9 @@ select {
     0 0 40px #008cff;
 }
 
-/* ANIMACIÓN */
 @keyframes popup {
   0% { transform: scale(0.4); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
-}
-
-/* HISTORIAL */
-.game-info button {
-  background: #003cff;
-  box-shadow: 0 0 10px #0066ff;
-}
-.game-info button:hover {
-  background: #4d79ff;
 }
 
 /* RESPONSIVE */
