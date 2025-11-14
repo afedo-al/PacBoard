@@ -1,8 +1,8 @@
-# 🎮 PAC-BOARD – Tic-Tac-Toe Arcade (React + Vite)
+# PAC-BOARD
 
 
 ## Mejoras implementadas 
-### ✔ 1. Tema Arcade (Pac-Man)
+###  1. Tema Arcade (Pac-Man)
 - Reemplazo de X y O por imágenes:
   - x → **FANTASMITA**
   - o → **PACMAN :V**
@@ -29,7 +29,7 @@ Se almacena en `localStorage`:
 Así, el juego continúa después de recargar la página.
 
 
-### ✔ 5. Easter Egg (botón Info)
+###  5. Easter Egg (botón Info)
 Botón que muestra:
 
 ```
@@ -39,7 +39,7 @@ Matrícula: 66340
 ```
 ---
 
-## 🕹 Cómo jugar
+##  Cómo jugar
 1. Selecciona el tamaño del tablero.  
 2. Juega turnos entre **FANTASMITA** y **PACMAN :V**.  
 3. El sistema detecta:
@@ -50,5 +50,5 @@ Matrícula: 66340
 
 ---
 
-## 🌐 Repositorio
+##  Repositorio
 https://github.com/afedo-al/PacBoard
